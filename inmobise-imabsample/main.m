@@ -1,11 +1,4 @@
-//
 //  main.m
-//  mopub-sharknark
-//
-//  Created by Jason C on 6/21/18.
-//  Copyright © 2018 Jason C. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 

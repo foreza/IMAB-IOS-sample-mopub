@@ -1,9 +1,4 @@
-//
 //  Constants.h
-//  mopub-sharknark
-//
-//
-
 #ifndef Constants_h
 #define Constants_h
 

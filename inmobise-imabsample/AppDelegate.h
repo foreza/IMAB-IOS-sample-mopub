@@ -1,8 +1,4 @@
-//
 //  AppDelegate.h
-//  mopub-sharknark
-//
-//
 
 #import <UIKit/UIKit.h>
 

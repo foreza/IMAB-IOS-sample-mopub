@@ -1,8 +1,4 @@
-//
 //  DataViewController.m
-//  mopub-sharknark
-//
-//
 
 #import "DataViewController.h"
 #import "Constants.h"

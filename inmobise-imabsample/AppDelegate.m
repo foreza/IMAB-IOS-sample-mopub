@@ -1,8 +1,5 @@
-//
 //  AppDelegate.m
-//  mopub-sharknark
-//
-//
+
 
 #import "AppDelegate.h"
 #import "Constants.h"
