@@ -1,41 +1,31 @@
-//  DataViewController.m
+//
+//  InterstitialViewController.m
+//  inmobise
+//
+//  Created by Jason C on 5/23/19.
+//  Copyright © 2019 Jason C. All rights reserved.
+//
 
-#import "DataViewController.h"
+#import "InterstitialViewController.h"
 #import "Constants.h"
 
+@interface InterstitialViewController ()
 
-@implementation DataViewController
+@end
 
-#pragma mark - <View / IB Actions / Init methods>
+@implementation InterstitialViewController
 
 - (void)viewDidLoad {
-
-    NSLog(@"%@", [kLogTag stringByAppendingString:@"DataViewController - viewDidLoad"]);
-    
-    [self setupAdditionalViewElements];
-    [self intializeSDKs];
-    [self initializeInterstitial];
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
+    [self initializeInterstitial];
+
 }
 
-// Extra fluff: Gets the SDK versions and sets labels.
-- (void)setupAdditionalViewElements{
-    
-    // Set title and text information for SDK versions
-    self.title = kAppName;
-    
-    _AerServSDKVersion.text = [AerServSDK sdkVersion];
-    _MoPubSDKVersion.text = MP_SDK_VERSION;
-    
-}
-
-// Handle any initialization here.
--(void)intializeSDKs {
-
-    // Init the IM Audience Bidder SDK
-    [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
-    
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
@@ -46,20 +36,9 @@
     self.interstitial.delegate = self;
     
     // Begin a delayed load.
-    [self delayedLoadInterstitial:5];           // Begin loading the interstitial with some delay.
+    [self delayedLoadInterstitial:kInitialInterstitialLoadDelay];           // Begin loading the interstitial with some delay.
     
 }
-
-
-// IB Action to load the banner into the view. No preload logic here.
-- (IBAction)loadBanner:(id)sender {
-    
-    [self loadBanner];
-    
-}
-
-
-
 
 // IB Action to show the interstitial.
 - (IBAction)showInterstitial:(id)sender {
@@ -106,7 +85,7 @@
 
 // This delegate will be invoked if we are not using bid objects
 - (void)audienceBidderDidGenerateBidResponse:(IMBidResponse *)bidResponse {
-
+    
     if ([bidResponse.placement  isEqual: kASInterstitialID]) {
         
         // Set or append the returned InMobi bidResponse keywords on the interstitial
@@ -125,19 +104,6 @@
         [self.interstitial loadAd];
         
     }
-    
-}
-
-
-
-
-
-#pragma mark - <IMAB Banner Methods>
-
-
-- (void)loadBanner {
-    
-    // TODO
     
 }
 
@@ -168,13 +134,12 @@
         
         NSLog(@"%@", [kLogTag stringByAppendingString:@"delayedSubmitInterstitialBid"]);
         
-//      Submit bid after some delay
+        //      Submit bid after some delay
         [self.interstitialBidOBject submitBid];
         [self indicator_showStateCurrentlyLoading];
     });
     
 }
-
 
 
 // Function that will submit a bid if bidding logic is enabled.
@@ -184,7 +149,7 @@
     
     [self.intReadyIndicator setHidden:false];        // Hide indicator
     [self.intReadyIndicator startAnimating];         // Start animation to indicate load cycle has begun.
-
+    
     
     if (kSupportAB){
         NSLog(@"%@", [kLogTag stringByAppendingString:@"DataViewController - loadInterstitial - createBidForAdType - submitBid"]);
@@ -197,25 +162,6 @@
     
 }
 
-
-
-#pragma mark - <MPAdViewDelegate - for Banners!>
-
-- (void)adViewDidLoadAd:(MPAdView *)view {
-    
-    // TODO
-    
-}
-
-
-- (void)adViewDidFailToLoadAd:(MPAdView *)view {
-    
-    // TODO
-    
-}
-
-
-
 #pragma mark - <MPInterstitialAdControllerDelegate>
 
 
@@ -227,10 +173,10 @@
 }
 
 - (void)interstitialDidDisappear:(MPInterstitialAdController *)interstitial {
-
-        // Maybe insert a delay here as well if your expect users to be heavily interacting with the button.
+    
+    // Maybe insert a delay here as well if your expect users to be heavily interacting with the button.
     [self indicator_showStateCurrentlyWaitingForNextLoad];
-    [self delayedSubmitInterstitialBid:5];
+    [self delayedSubmitInterstitialBid:kSuccessLoadInterstitialDelay];
     
     NSLog(@"%@", [kLogTag stringByAppendingString:@"interstitialDidDisappear"]);
 }
@@ -241,7 +187,7 @@
 {
     NSLog(@"%@", [kLogTag stringByAppendingString:@"interstitialDidFailToLoadAd"]);
     [self indicator_showStateCurrentlyWaitingForNextLoad];
-    [self delayedSubmitInterstitialBid:20];
+    [self delayedSubmitInterstitialBid:kFailLoadInterstitialDelay];
     
 }
 
@@ -257,21 +203,6 @@
 }
 
 
-
-
-#pragma mark - <Misc Methods>
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-
 - (void) indicator_showStateCurrentlyLoading{
     [self.intReadyIndicator startAnimating];
     [self.intReadyIndicator setHidden:false];
@@ -284,9 +215,8 @@
 
 - (void) indicator_showStateCurrentlyWaitingForNextLoad{
     [self.intReadyIndicator stopAnimating];
-    [self.intReadyIndicator setHidden:true];       
+    [self.intReadyIndicator setHidden:true];
 }
-
 
 
 

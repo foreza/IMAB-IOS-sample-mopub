@@ -214,11 +214,12 @@
 		9207C200228E4A7F00277B58 /* MPInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9207C130228E4A7F00277B58 /* MPInterstitialCustomEvent.m */; };
 		9207C201228E4A7F00277B58 /* MPConsentChangedNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9207C132228E4A7F00277B58 /* MPConsentChangedNotification.m */; };
 		9234E51920DC49B200664810 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234E51820DC49B200664810 /* AppDelegate.m */; };
-		9234E51F20DC49B200664810 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234E51E20DC49B200664810 /* DataViewController.m */; };
+		9234E51F20DC49B200664810 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234E51E20DC49B200664810 /* MainViewController.m */; };
 		9234E52520DC49B200664810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9234E52320DC49B200664810 /* Main.storyboard */; };
 		9234E52720DC49B300664810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234E52620DC49B300664810 /* Assets.xcassets */; };
 		9234E52A20DC49B300664810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9234E52820DC49B300664810 /* LaunchScreen.storyboard */; };
 		9234E52D20DC49B300664810 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234E52C20DC49B300664810 /* main.m */; };
+		924A01B822975747002AB158 /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924A01B722975747002AB158 /* InterstitialViewController.m */; };
 		924D4B2020DC54DA003EE824 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D4B1F20DC54DA003EE824 /* AdSupport.framework */; };
 		924D4B2220DC54E0003EE824 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D4B2120DC54E0003EE824 /* AVFoundation.framework */; };
 		924D4B2420DC54E7003EE824 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D4B2320DC54E7003EE824 /* CoreGraphics.framework */; };
@@ -668,13 +669,15 @@
 		9234E51420DC49B200664810 /* inmobise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inmobise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234E51720DC49B200664810 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9234E51820DC49B200664810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9234E51D20DC49B200664810 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
-		9234E51E20DC49B200664810 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		9234E51D20DC49B200664810 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9234E51E20DC49B200664810 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9234E52420DC49B200664810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9234E52620DC49B300664810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9234E52920DC49B300664810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9234E52B20DC49B300664810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234E52C20DC49B300664810 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		924A01B622975747002AB158 /* InterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
+		924A01B722975747002AB158 /* InterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
 		924D4B1F20DC54DA003EE824 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		924D4B2120DC54E0003EE824 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		924D4B2320DC54E7003EE824 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1344,14 +1347,13 @@
 		9234E51620DC49B200664810 /* inmobise-imabsample */ = {
 			isa = PBXGroup;
 			children = (
+				924A01B922975753002AB158 /* ViewControllers */,
 				9207BF74228E4A7E00277B58 /* InMobiABMoPubPlugin.framework */,
 				9207BF75228E4A7E00277B58 /* InMobiSDK.framework */,
 				9207BF76228E4A7E00277B58 /* MoPubSDK */,
 				9207BF71228E327E00277B58 /* Constants.h */,
 				9234E51720DC49B200664810 /* AppDelegate.h */,
 				9234E51820DC49B200664810 /* AppDelegate.m */,
-				9234E51D20DC49B200664810 /* DataViewController.h */,
-				9234E51E20DC49B200664810 /* DataViewController.m */,
 				9234E52320DC49B200664810 /* Main.storyboard */,
 				9234E52620DC49B300664810 /* Assets.xcassets */,
 				9234E52820DC49B300664810 /* LaunchScreen.storyboard */,
@@ -1359,6 +1361,17 @@
 				9234E52C20DC49B300664810 /* main.m */,
 			);
 			path = "inmobise-imabsample";
+			sourceTree = "<group>";
+		};
+		924A01B922975753002AB158 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9234E51D20DC49B200664810 /* MainViewController.h */,
+				9234E51E20DC49B200664810 /* MainViewController.m */,
+				924A01B622975747002AB158 /* InterstitialViewController.h */,
+				924A01B722975747002AB158 /* InterstitialViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		924D4B1E20DC54DA003EE824 /* Frameworks */ = {
@@ -1503,7 +1516,7 @@
 				9207C1CE228E4A7F00277B58 /* NSJSONSerialization+MPAdditions.m in Sources */,
 				9234E52D20DC49B300664810 /* main.m in Sources */,
 				9207C151228E4A7F00277B58 /* MPNativeCache.m in Sources */,
-				9234E51F20DC49B200664810 /* DataViewController.m in Sources */,
+				9234E51F20DC49B200664810 /* MainViewController.m in Sources */,
 				9207C1F5228E4A7F00277B58 /* MPRewardedVideoAdManager.m in Sources */,
 				9207C1F4228E4A7F00277B58 /* MPMoPubRewardedVideoCustomEvent.m in Sources */,
 				9207C1C0228E4A7F00277B58 /* MPUserInteractionGestureRecognizer.m in Sources */,
@@ -1647,6 +1660,7 @@
 				9207C201228E4A7F00277B58 /* MPConsentChangedNotification.m in Sources */,
 				9207C1FE228E4A7F00277B58 /* MPAdConversionTracker.m in Sources */,
 				9207C193228E4A7F00277B58 /* MPActivityViewControllerHelper.m in Sources */,
+				924A01B822975747002AB158 /* InterstitialViewController.m in Sources */,
 				9207C192228E4A7F00277B58 /* MPAdConfiguration.m in Sources */,
 				9207C19D228E4A7F00277B58 /* MPAdAlertManager.m in Sources */,
 				9207C1C1228E4A7F00277B58 /* MPAnalyticsTracker.m in Sources */,

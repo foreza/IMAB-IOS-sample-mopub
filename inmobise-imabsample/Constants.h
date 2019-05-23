@@ -15,6 +15,10 @@
 #define kSupportABwithKW 0
 
 
+#define kInitialInterstitialLoadDelay 5
+#define kFailLoadInterstitialDelay 20
+#define kSuccessLoadInterstitialDelay 10
+
 #define kLogTag @"IMABTEST: "
 #define kAppName @"Audience Bidder Test"
 
