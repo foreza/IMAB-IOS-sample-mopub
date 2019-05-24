@@ -213,6 +213,7 @@
 		9207C1FF228E4A7F00277B58 /* MoPub.m in Sources */ = {isa = PBXBuildFile; fileRef = 9207C12B228E4A7F00277B58 /* MoPub.m */; };
 		9207C200228E4A7F00277B58 /* MPInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9207C130228E4A7F00277B58 /* MPInterstitialCustomEvent.m */; };
 		9207C201228E4A7F00277B58 /* MPConsentChangedNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9207C132228E4A7F00277B58 /* MPConsentChangedNotification.m */; };
+		9213C0772297700F003D247C /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9213C0762297700F003D247C /* BannerViewController.m */; };
 		9234E51920DC49B200664810 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234E51820DC49B200664810 /* AppDelegate.m */; };
 		9234E51F20DC49B200664810 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234E51E20DC49B200664810 /* MainViewController.m */; };
 		9234E52520DC49B200664810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9234E52320DC49B200664810 /* Main.storyboard */; };
@@ -666,6 +667,8 @@
 		9207C131228E4A7F00277B58 /* MPBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBool.h; sourceTree = "<group>"; };
 		9207C132228E4A7F00277B58 /* MPConsentChangedNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPConsentChangedNotification.m; sourceTree = "<group>"; };
 		9207C133228E4A7F00277B58 /* MPInterstitialAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPInterstitialAdController.h; sourceTree = "<group>"; };
+		9213C0752297700F003D247C /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		9213C0762297700F003D247C /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		9234E51420DC49B200664810 /* inmobise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inmobise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234E51720DC49B200664810 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9234E51820DC49B200664810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1370,6 +1373,8 @@
 				9234E51E20DC49B200664810 /* MainViewController.m */,
 				924A01B622975747002AB158 /* InterstitialViewController.h */,
 				924A01B722975747002AB158 /* InterstitialViewController.m */,
+				9213C0752297700F003D247C /* BannerViewController.h */,
+				9213C0762297700F003D247C /* BannerViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1592,6 +1597,7 @@
 				9207C1C3228E4A7F00277B58 /* MPInternalUtils.m in Sources */,
 				9207C1D6228E4A7F00277B58 /* MPVASTAd.m in Sources */,
 				9207C1D8228E4A7F00277B58 /* MPVASTModel.m in Sources */,
+				9213C0772297700F003D247C /* BannerViewController.m in Sources */,
 				9207C17F228E4A7F00277B58 /* MPBaseInterstitialAdapter.m in Sources */,
 				9207C1A6228E4A7F00277B58 /* MPMediationManager.m in Sources */,
 				9207C1EA228E4A7F00277B58 /* MOPUBFullscreenPlayerViewController.m in Sources */,

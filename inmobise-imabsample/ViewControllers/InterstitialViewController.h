@@ -11,7 +11,7 @@
 #import <InMobiSDK/InMobiSDK.h>
 
 
-@interface InterstitialViewController : UIViewController <MPAdViewDelegate, MPInterstitialAdControllerDelegate, IMAudienceBidderDelegate>
+@interface InterstitialViewController : UIViewController <MPInterstitialAdControllerDelegate, IMAudienceBidderDelegate>
 
 @property (strong, nonatomic) IMBidObject *interstitialBidOBject;
 @property (strong, nonatomic) MPInterstitialAdController *interstitial;

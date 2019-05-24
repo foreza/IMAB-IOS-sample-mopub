@@ -40,6 +40,9 @@
                                         <rect key="frame" x="92" y="78" width="151" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="IMAB Banner Example"/>
+                                        <connections>
+                                            <segue destination="C4h-Nv-2gL" kind="show" id="V5A-JJ-UMY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7v-4R-cug">
                                         <rect key="frame" x="83" y="133" width="170" height="30"/>
@@ -64,6 +67,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="596" y="-243.32833583208398"/>
+        </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="4Jn-IA-jbx">
+            <objects>
+                <viewController id="C4h-Nv-2gL" customClass="BannerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bfi-4s-28S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Dk4-9f-jQ0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0a-5M-axJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="-1090"/>
         </scene>
         <!--Interstitial View Controller-->
         <scene sceneID="9kl-fb-zH0">
@@ -99,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9w-Bk-S0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="-600"/>
+            <point key="canvasLocation" x="1906" y="-361"/>
         </scene>
     </scenes>
 </document>
