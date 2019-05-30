@@ -75,9 +75,16 @@ Boolean bannerLoaded = false;
     // Regardless of which mode, make sure to first load the banner and add it to the view
     self.adView = [[MPAdView alloc] initWithAdUnitId:kMPBannerID size:MOPUB_BANNER_SIZE];
     self.adView.frame = CGRectMake((self.view.bounds.size.width - MOPUB_BANNER_SIZE.width) / 2, self.view.bounds.size.height - (MOPUB_BANNER_SIZE.height), MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
+    
+    // Optional: Add a border and background color so we know the adView has been added
+    self.adView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.adView.layer.borderWidth = 3;
+    self.adView.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+
     [self.view addSubview:self.adView];
     [self.adView stopAutomaticallyRefreshingContents];              // Ensure MoPub banner refresh is disabled. Consult your account manager if you have any questions.
     self.adView.delegate = self;
+    
     
 
     NSLog(@"%@", [kLogTag stringByAppendingString:@"DataViewController loadBanner - createBidForAdType"]);
@@ -156,7 +163,5 @@ Boolean bannerLoaded = false;
     
     [self.adView loadAd];
 }
-
-
 
 @end

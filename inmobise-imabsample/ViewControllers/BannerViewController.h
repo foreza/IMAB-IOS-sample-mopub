@@ -13,6 +13,6 @@
 @interface BannerViewController : UIViewController <MPAdViewDelegate, IMAudienceBidderDelegate>
 
 @property (strong, nonatomic) IMBidObject *bannerBidObject;                         // Audience Bidder banner bid object reference
-@property (strong, nonatomic) MPAdView *adView;                                     // For MoPub Banner - currently unused
+@property (strong, nonatomic) MPAdView *adView;                                     // For MoPub Banner
 
 @end

@@ -5,12 +5,13 @@
 #import <InMobiSDK/InMobiSDK.h>
 
 
-@interface MainViewController : UIViewController <MPAdViewDelegate, MPInterstitialAdControllerDelegate, IMAudienceBidderDelegate>
+@interface MainViewController : UIViewController
 
 
 // UI IBOutlet references
+
 @property (weak, nonatomic) IBOutlet UITextField *MoPubSDKVersion;
-@property (weak, nonatomic) IBOutlet UITextField *AerServSDKVersion;
+@property (weak, nonatomic) IBOutlet UITextField *IMUnifiedSDKVersion;
 
 
 

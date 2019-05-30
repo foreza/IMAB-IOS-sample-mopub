@@ -60,7 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="K9I-jD-KjA"/>
                     </view>
                     <connections>
-                        <outlet property="AerServSDKVersion" destination="KAV-Rd-074" id="Sfe-Xm-ftj"/>
+                        <outlet property="IMUnifiedSDKVersion" destination="KAV-Rd-074" id="Ljt-Di-oVr"/>
                         <outlet property="MoPubSDKVersion" destination="zat-Hq-kuW" id="CSM-KQ-I0j"/>
                     </connections>
                 </viewController>

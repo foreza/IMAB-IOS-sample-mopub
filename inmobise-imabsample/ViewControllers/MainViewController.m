@@ -24,8 +24,8 @@
     // Set title and text information for SDK versions
     self.title = kAppName;
     
-    _AerServSDKVersion.text = [AerServSDK sdkVersion];
-    _MoPubSDKVersion.text = MP_SDK_VERSION;
+    _IMUnifiedSDKVersion.text = [NSString stringWithFormat:@"%s%@", "InMobi SDK Version: ", [AerServSDK sdkVersion]];;
+    _MoPubSDKVersion.text = [NSString stringWithFormat:@"%s%@", "MoPub SDK Version: ", MP_SDK_VERSION];
     
 }
 
@@ -36,51 +36,6 @@
     [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
     
 }
-
-
-
-
-// IB Action to load the banner into the view. No preload logic here.
-- (IBAction)loadBanner:(id)sender {
-    
-    [self loadBanner];
-    
-}
-
-
-
-
-
-
-
-#pragma mark - <IMAB Banner Methods>
-
-
-- (void)loadBanner {
-    
-    // TODO
-    
-}
-
-
-
-
-#pragma mark - <MPAdViewDelegate - for Banners!>
-
-- (void)adViewDidLoadAd:(MPAdView *)view {
-    
-    // TODO
-    
-}
-
-
-- (void)adViewDidFailToLoadAd:(MPAdView *)view {
-    
-    // TODO
-    
-}
-
-
 
 
 
