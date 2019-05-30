@@ -13,7 +13,7 @@
     NSLog(@"%@", [kLogTag stringByAppendingString:@"DataViewController - viewDidLoad"]);
     
     [self setupAdditionalViewElements];
-    [self intializeSDKs];
+    [self initializeSDKs];
     [super viewDidLoad];
     
 }
@@ -30,7 +30,7 @@
 }
 
 // Handle any initialization here.
--(void)intializeSDKs {
+-(void)initializeSDKs {
 
     // Init the IM Audience Bidder SDK
     [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
