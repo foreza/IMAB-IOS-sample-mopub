@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     
     [self initializeInterstitial];
+    [self indicator_showInitialState];      
 
 }
 
@@ -202,20 +203,28 @@
     
 }
 
+- (void) indicator_showInitialState{
+    [self.intReadyIndicator setHidden:true];
+    [self.intReadyIndicator setColor:UIColor.darkGrayColor];
+}
+
 
 - (void) indicator_showStateCurrentlyLoading{
-    [self.intReadyIndicator startAnimating];
     [self.intReadyIndicator setHidden:false];
+    [self.intReadyIndicator startAnimating];
+    [self.intReadyIndicator setColor:UIColor.darkGrayColor];
 }
 
 - (void) indicator_showStateCurrentlyWaitingForShow{
-    [self.intReadyIndicator stopAnimating];
     [self.intReadyIndicator setHidden:false];
+    [self.intReadyIndicator stopAnimating];
+    [self.intReadyIndicator setColor:UIColor.greenColor];
 }
 
 - (void) indicator_showStateCurrentlyWaitingForNextLoad{
+    [self.intReadyIndicator setHidden:false];
     [self.intReadyIndicator stopAnimating];
-    [self.intReadyIndicator setHidden:true];
+    [self.intReadyIndicator setColor:UIColor.redColor];
 }
 
 
