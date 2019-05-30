@@ -76,6 +76,7 @@ Boolean bannerLoaded = false;
     self.adView = [[MPAdView alloc] initWithAdUnitId:kMPBannerID size:MOPUB_BANNER_SIZE];
     self.adView.frame = CGRectMake((self.view.bounds.size.width - MOPUB_BANNER_SIZE.width) / 2, self.view.bounds.size.height - (MOPUB_BANNER_SIZE.height), MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
     [self.view addSubview:self.adView];
+    [self.adView stopAutomaticallyRefreshingContents];              // Ensure MoPub banner refresh is disabled. Consult your account manager if you have any questions.
     self.adView.delegate = self;
     
 
@@ -84,6 +85,7 @@ Boolean bannerLoaded = false;
     [self.bannerBidObject submitBid];
     
 }
+
 
 
 #pragma mark - <MPAdViewDelegate - for Banners!>
@@ -96,6 +98,9 @@ Boolean bannerLoaded = false;
     // On a successful load, call submitBid for the next refresh
     [self.bannerBidObject submitBid];
     
+    // Indicate to our controller that we'd like to refresh the ad view
+    [self startBannerRefreshTimer];
+    
 }
 
 
@@ -105,10 +110,51 @@ Boolean bannerLoaded = false;
     bannerLoaded = true;
     
     // On a failed load, still call submitBid for the next banner refresh
-
     [self.bannerBidObject submitBid];
-
     
+    // Indicate to our controller that we'd like to refresh the ad view
+    [self startBannerRefreshTimer];
+
+}
+
+#pragma mark - Controlling your own refresh
+
+/*
+ **** IMPORTANT NOTE ****
+ Mopub IOS SDK does NOT refresh custom keywords even though we update the MPAdView.
+ MPBannerAdManager continues to use old keywords until you call loadAd again.
+ The impact: Updated prices are not reflected, and this is no longer dynamic bidding.
+ 
+ We have opened a PR here: https://github.com/mopub/mopub-ios-sdk/pull/270
+ 
+ So, this leaves you with 2 choices:
+ (if you want this to work and for everyone to earn lots of money)
+ - Disable MoPub banner auto-refresh, and use a timer like below to control refresh instead. (This code example)
+ - Download MoPub's open source code, tweak as we have in the above PR, and banner auto-refresh with updated keywords will work as intended.
+ 
+ 
+ DISCLAIMER:
+ You may implement a better and more sophisticated timing scheme - however you want.
+ Below is just a simple working example.
+ */
+
+
+- (void) startBannerRefreshTimer {
+    
+    [NSTimer scheduledTimerWithTimeInterval:kSelfBannerRefreshTimer
+                                     target:self
+                                   selector:@selector(triggerManualBannerRefresh)
+                                   userInfo:nil
+                                    repeats:NO];
+    
+}
+
+
+- (void) triggerManualBannerRefresh {
+    
+    NSLog(@"%@", [kLogTag stringByAppendingString:@"triggerManualBannerRefresh"]);
+    
+    [self.adView loadAd];
 }
 
 

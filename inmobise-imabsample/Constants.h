@@ -19,6 +19,8 @@
 #define kFailLoadInterstitialDelay 20
 #define kSuccessLoadInterstitialDelay 10
 
+#define kSelfBannerRefreshTimer 30
+
 #define kLogTag @"IMABTEST: "
 #define kAppName @"Audience Bidder Test"
 
