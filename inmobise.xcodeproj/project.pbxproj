@@ -238,6 +238,7 @@
 		924D4B3C20DC5580003EE824 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D4B3B20DC5580003EE824 /* WebKit.framework */; };
 		924D54C720DC5B55003EE824 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D54C620DC5B55003EE824 /* libxml2.2.tbd */; };
 		92BDAD5122A099F10068F713 /* BannerKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BDAD5022A099F10068F713 /* BannerKWViewController.m */; };
+		92BDAD5422A1AF500068F713 /* InterstitialKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BDAD5322A1AF500068F713 /* InterstitialKWViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -700,6 +701,8 @@
 		924D54C620DC5B55003EE824 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		92BDAD4F22A099F10068F713 /* BannerKWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerKWViewController.h; sourceTree = "<group>"; };
 		92BDAD5022A099F10068F713 /* BannerKWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerKWViewController.m; sourceTree = "<group>"; };
+		92BDAD5222A1AF500068F713 /* InterstitialKWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialKWViewController.h; sourceTree = "<group>"; };
+		92BDAD5322A1AF500068F713 /* InterstitialKWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialKWViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1380,6 +1383,8 @@
 				9213C0762297700F003D247C /* BannerViewController.m */,
 				92BDAD4F22A099F10068F713 /* BannerKWViewController.h */,
 				92BDAD5022A099F10068F713 /* BannerKWViewController.m */,
+				92BDAD5222A1AF500068F713 /* InterstitialKWViewController.h */,
+				92BDAD5322A1AF500068F713 /* InterstitialKWViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1548,6 +1553,7 @@
 				9207C158228E4A7F00277B58 /* MPNativeAd.m in Sources */,
 				9207C1DA228E4A7F00277B58 /* MPVASTLinearAd.m in Sources */,
 				9207C198228E4A7F00277B58 /* MPEnhancedDeeplinkRequest.m in Sources */,
+				92BDAD5422A1AF500068F713 /* InterstitialKWViewController.m in Sources */,
 				9207C18E228E4A7F00277B58 /* MPAdDestinationDisplayAgent.m in Sources */,
 				9207C1B1228E4A7F00277B58 /* MRError.m in Sources */,
 				9207C1D1228E4A7F00277B58 /* NSMutableArray+MPAdditions.m in Sources */,
