@@ -1,4 +1,7 @@
 .DS_Store
+Pods/
+inmobise.xcworkspace/
+Podfile.lock
 
 *Frameworks/
 
