@@ -33,7 +33,11 @@
 -(void)initializeSDKs {
 
     // Init the IM Audience Bidder SDK
-    [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
+    
+    // [IMAudienceBidder initializeWithAppID:kIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
+    
+    [IMAudienceBidder initializeWithAppID:kQAIMABAppID andUserConsent:@{ IM_GDPR_CONSENT_AVAILABLE : @YES }];
+
     
 }
 

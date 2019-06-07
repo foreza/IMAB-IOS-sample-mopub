@@ -34,9 +34,13 @@
 		924D54C720DC5B55003EE824 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D54C620DC5B55003EE824 /* libxml2.2.tbd */; };
 		92BDAD5122A099F10068F713 /* BannerKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BDAD5022A099F10068F713 /* BannerKWViewController.m */; };
 		92BDAD5422A1AF500068F713 /* InterstitialKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BDAD5322A1AF500068F713 /* InterstitialKWViewController.m */; };
-		92C9E50E22A72B7C00BC604F /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C9E50D22A72B7C00BC604F /* MoPub.framework */; };
 		92C9E51122A72B8D00BC604F /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C9E50F22A72B8D00BC604F /* InMobiSDK.framework */; };
 		92C9E51222A72B8D00BC604F /* InMobiABMoPubPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C9E51022A72B8D00BC604F /* InMobiABMoPubPlugin.framework */; };
+		92CE19FA22A86C650094A9F7 /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CE19F922A86C650094A9F7 /* MoPub.framework */; };
+		92CE19FC22A86CA90094A9F7 /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CE19FB22A86CA90094A9F7 /* DTBiOSSDK.framework */; };
+		92CE19FF22A86E140094A9F7 /* MyAudienceBidder.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE19FD22A86E140094A9F7 /* MyAudienceBidder.m */; };
+		92CE1A0222A86EBD0094A9F7 /* BannerAPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE1A0122A86EBD0094A9F7 /* BannerAPSViewController.m */; };
+		92CE1A0522A86EC90094A9F7 /* InterstitialAPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CE1A0422A86EC90094A9F7 /* InterstitialAPSViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -510,9 +514,16 @@
 		92C9E50A22A72B7600BC604F /* MPBaseAdapterConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPBaseAdapterConfiguration.m; sourceTree = "<group>"; };
 		92C9E50B22A72B7600BC604F /* MPConsentChangedNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPConsentChangedNotification.m; sourceTree = "<group>"; };
 		92C9E50C22A72B7600BC604F /* MPInterstitialAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPInterstitialAdController.h; sourceTree = "<group>"; };
-		92C9E50D22A72B7C00BC604F /* MoPub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MoPub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C9E50F22A72B8D00BC604F /* InMobiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiSDK.framework; path = "Pods/inmobi-mp-plugin/inmobi-mp-plugin/Frameworks/InMobiSDK.framework"; sourceTree = "<group>"; };
 		92C9E51022A72B8D00BC604F /* InMobiABMoPubPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiABMoPubPlugin.framework; path = "Pods/inmobi-mp-plugin/inmobi-mp-plugin/Frameworks/InMobiABMoPubPlugin.framework"; sourceTree = "<group>"; };
+		92CE19F922A86C650094A9F7 /* MoPub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MoPub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92CE19FB22A86CA90094A9F7 /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTBiOSSDK.framework; path = Frameworks/DTBiOSSDK.framework; sourceTree = "<group>"; };
+		92CE19FD22A86E140094A9F7 /* MyAudienceBidder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAudienceBidder.m; sourceTree = "<group>"; };
+		92CE19FE22A86E140094A9F7 /* MyAudienceBidder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAudienceBidder.h; sourceTree = "<group>"; };
+		92CE1A0022A86EBD0094A9F7 /* BannerAPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerAPSViewController.h; sourceTree = "<group>"; };
+		92CE1A0122A86EBD0094A9F7 /* BannerAPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerAPSViewController.m; sourceTree = "<group>"; };
+		92CE1A0322A86EC90094A9F7 /* InterstitialAPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialAPSViewController.h; sourceTree = "<group>"; };
+		92CE1A0422A86EC90094A9F7 /* InterstitialAPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterstitialAPSViewController.m; sourceTree = "<group>"; };
 		99AFF45ED7C8AF7FAF20A53C /* Pods-inmobise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inmobise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inmobise/Pods-inmobise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -521,9 +532,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CE19FC22A86CA90094A9F7 /* DTBiOSSDK.framework in Frameworks */,
+				92CE19FA22A86C650094A9F7 /* MoPub.framework in Frameworks */,
 				92C9E51122A72B8D00BC604F /* InMobiSDK.framework in Frameworks */,
 				92C9E51222A72B8D00BC604F /* InMobiABMoPubPlugin.framework in Frameworks */,
-				92C9E50E22A72B7C00BC604F /* MoPub.framework in Frameworks */,
 				924D54C720DC5B55003EE824 /* libxml2.2.tbd in Frameworks */,
 				924D4B3C20DC5580003EE824 /* WebKit.framework in Frameworks */,
 				924D4B3A20DC557B003EE824 /* UIKit.framework in Frameworks */,
@@ -577,6 +589,7 @@
 		9234E51620DC49B200664810 /* inmobise-imabsample */ = {
 			isa = PBXGroup;
 			children = (
+				92CE19F822A86B560094A9F7 /* MyAudienceBidder */,
 				924A01B922975753002AB158 /* ViewControllers */,
 				9207BF71228E327E00277B58 /* Constants.h */,
 				9234E51720DC49B200664810 /* AppDelegate.h */,
@@ -603,6 +616,10 @@
 				92BDAD5022A099F10068F713 /* BannerKWViewController.m */,
 				92BDAD5222A1AF500068F713 /* InterstitialKWViewController.h */,
 				92BDAD5322A1AF500068F713 /* InterstitialKWViewController.m */,
+				92CE1A0022A86EBD0094A9F7 /* BannerAPSViewController.h */,
+				92CE1A0122A86EBD0094A9F7 /* BannerAPSViewController.m */,
+				92CE1A0322A86EC90094A9F7 /* InterstitialAPSViewController.h */,
+				92CE1A0422A86EC90094A9F7 /* InterstitialAPSViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -610,9 +627,10 @@
 		924D4B1E20DC54DA003EE824 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92CE19FB22A86CA90094A9F7 /* DTBiOSSDK.framework */,
+				92CE19F922A86C650094A9F7 /* MoPub.framework */,
 				92C9E51022A72B8D00BC604F /* InMobiABMoPubPlugin.framework */,
 				92C9E50F22A72B8D00BC604F /* InMobiSDK.framework */,
-				92C9E50D22A72B7C00BC604F /* MoPub.framework */,
 				92C9E34422A72B7600BC604F /* MoPubSDK */,
 				924D54C620DC5B55003EE824 /* libxml2.2.tbd */,
 				924D4B3B20DC5580003EE824 /* WebKit.framework */,
@@ -1260,6 +1278,15 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
+		92CE19F822A86B560094A9F7 /* MyAudienceBidder */ = {
+			isa = PBXGroup;
+			children = (
+				92CE19FE22A86E140094A9F7 /* MyAudienceBidder.h */,
+				92CE19FD22A86E140094A9F7 /* MyAudienceBidder.m */,
+			);
+			path = MyAudienceBidder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1372,12 +1399,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9234E52D20DC49B300664810 /* main.m in Sources */,
+				92CE1A0222A86EBD0094A9F7 /* BannerAPSViewController.m in Sources */,
 				9234E51F20DC49B200664810 /* MainViewController.m in Sources */,
 				92BDAD5422A1AF500068F713 /* InterstitialKWViewController.m in Sources */,
+				92CE19FF22A86E140094A9F7 /* MyAudienceBidder.m in Sources */,
 				9213C0772297700F003D247C /* BannerViewController.m in Sources */,
 				92BDAD5122A099F10068F713 /* BannerKWViewController.m in Sources */,
 				924A01B822975747002AB158 /* InterstitialViewController.m in Sources */,
 				9234E51920DC49B200664810 /* AppDelegate.m in Sources */,
+				92CE1A0522A86EC90094A9F7 /* InterstitialAPSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1530,6 +1560,7 @@
 					"$(PROJECT_DIR)/inmobise-imabsample/Frameworks",
 					"$(PROJECT_DIR)/inmobise-imabsample/Frameworks/MoPubSDK/Viewability/MOAT",
 					"$(PROJECT_DIR)/Pods/inmobi-mp-plugin/inmobi-mp-plugin/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/inmobise-imabsample/Info.plist";
@@ -1569,6 +1600,7 @@
 					"$(PROJECT_DIR)/inmobise-imabsample/Frameworks",
 					"$(PROJECT_DIR)/inmobise-imabsample/Frameworks/MoPubSDK/Viewability/MOAT",
 					"$(PROJECT_DIR)/Pods/inmobi-mp-plugin/inmobi-mp-plugin/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/inmobise-imabsample/Info.plist";
