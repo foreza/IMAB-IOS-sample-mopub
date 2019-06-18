@@ -16,12 +16,10 @@ https://developers.mopub.com/docs/ios/getting-started/
 ## IMAB Plugin:
 
 The SDK Package for IOS/Android comes with a 'Network Support' folder that contains all the plugin files required for integration.
-The .framework file would be dragged / dropped into the XCode project and then referenced in the build process to 'complete' the plugin procedure. 
 
 https://d2hzra53t5a9gw.cloudfront.net/documentation/documentation.html?platform=ios&plugin=mopub
 
 
 ## Notes:
 
-You will need to include your own version of the InMobi SDK, InMobi AB plugin, and MoPub SDK. These are not versioned.
-
+You can pull down the plugin and framework with the included Podfile.
