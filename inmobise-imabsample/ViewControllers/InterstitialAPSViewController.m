@@ -34,12 +34,7 @@
     // Initialize the wrapper object
     self.interstitialWrapper = [[MyAudienceBidder alloc] initWithDelegate:self];
     
-    // Set the app ID, APS UUID, InMobi placement, and timeout of the interstitial wrapper object
-//    [self.interstitialWrapper setA9AppKey:kAPSVideoAppKey];
-//    [self.interstitialWrapper setA9UUID: kAPSInterstitialVideoUUID];
-//    [self.interstitialWrapper setIMPLCID: kASInterstitialID];
-//    [self.interstitialWrapper  setTimeout:3.0];
-    
+    // Set the app ID, APS UUID, InMobi placement, and timeout of the interstitial wrapper objec®t
     [self.interstitialWrapper setA9AppKey:kQAA9AppId];
     [self.interstitialWrapper setA9UUID: kQAA9InterstitialSlotId];
     [self.interstitialWrapper setIMPLCID: kQAASInterstitialID];
