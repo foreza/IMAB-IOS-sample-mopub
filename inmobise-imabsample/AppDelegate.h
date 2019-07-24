@@ -3,6 +3,7 @@
 #import <UIKit/UIKit.h>
 
 #import "MoPub.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import <InMobiSDK/InMobiSDK.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

@@ -22,7 +22,8 @@ Boolean bannerLoaded = false;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self loadBanner];
+    [self loadMREC];            // Enable this to test MREC
+//    [self loadBanner];        // Enable this to test Banner
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,6 +93,36 @@ Boolean bannerLoaded = false;
     [self.bannerBidObject submitBid];
     
 }
+
+
+- (void)loadMREC {
+    
+    // Regardless of which mode, make sure to first load the banner and add it to the view
+    self.adView = [[MPAdView alloc] initWithAdUnitId:kMPMRECID size:MOPUB_MEDIUM_RECT_SIZE];
+    self.adView.frame = CGRectMake((self.view.bounds.size.width - MOPUB_MEDIUM_RECT_SIZE.width) / 2, self.view.bounds.size.height - (MOPUB_MEDIUM_RECT_SIZE.height), MOPUB_MEDIUM_RECT_SIZE.width, MOPUB_MEDIUM_RECT_SIZE.height);
+    
+    // Optional: Add a border and background color so we know the adView has been added
+    self.adView.layer.borderColor = [UIColor redColor].CGColor;
+    self.adView.layer.borderWidth = 2;
+    self.adView.layer.backgroundColor = [UIColor darkGrayColor].CGColor;
+    
+    [self.view addSubview:self.adView];
+    [self.adView stopAutomaticallyRefreshingContents];              // Ensure MoPub banner refresh is disabled. Consult your account manager if you have any questions.
+    self.adView.delegate = self;
+    
+    
+    
+    NSLog(@"%@", [kLogTag stringByAppendingString:@"DataViewController loadBanner - createBidForAdType"]);
+    self.bannerBidObject = [IMAudienceBidder createBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASMRECID adObj:self.adView andDelegate:self];
+    [self.bannerBidObject setBannerSlotSize:MOPUB_MEDIUM_RECT_SIZE];
+    [self.bannerBidObject submitBid];
+    
+}
+
+
+
+
+
 
 
 

@@ -16,6 +16,8 @@
     MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:kMPInterstitialID];
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:nil];
     
+    
+    
     return YES;
 }
 

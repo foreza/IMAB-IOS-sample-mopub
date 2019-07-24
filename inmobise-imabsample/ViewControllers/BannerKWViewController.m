@@ -22,7 +22,8 @@ Boolean bannerKWLoaded = false;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self loadKWBanner];
+//    [self loadKWBanner];
+    [self loadKWMREC];
 
 }
 
@@ -79,7 +80,19 @@ Boolean bannerKWLoaded = false;
     NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitBannerKWBid"]);
 
     // Call submitBidForAdType if you plan to add keywords to the object yourself. Note that this doesn't give you a bid object.
-    [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASBannerID andDelegate:self];
+//    [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASBannerID andDelegate:self];
+    [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASBannerID adSize:MOPUB_BANNER_SIZE andDelegate:self];
+
+}
+
+
+- (void) submitMRECKWBid {
+    
+    NSLog(@"%@", [kLogTag stringByAppendingString:@"IMAudienceBidder - submitMRECKWBid"]);
+    
+    // Call submitBidForAdType if you plan to add keywords to the object yourself. Note that this doesn't give you a bid object.
+    // [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASMRECID andDelegate:self];
+    [IMAudienceBidder submitBidForAdType:kIMBiddingAdTypeBanner withPlacement:kASMRECID adSize:MOPUB_MEDIUM_RECT_SIZE andDelegate:self];
 }
 
 
@@ -102,6 +115,25 @@ Boolean bannerKWLoaded = false;
     
 }
 
+- (void)loadKWMREC {
+    
+    // Regardless of which mode, make sure to first load the banner and add it to the view
+    self.adView = [[MPAdView alloc] initWithAdUnitId:kMPMRECID size:MOPUB_MEDIUM_RECT_SIZE];
+    self.adView.frame = CGRectMake((self.view.bounds.size.width - MOPUB_MEDIUM_RECT_SIZE.width) / 2, self.view.bounds.size.height - (MOPUB_MEDIUM_RECT_SIZE.height), MOPUB_MEDIUM_RECT_SIZE.width, MOPUB_MEDIUM_RECT_SIZE.height);
+    
+    // Optional: Add a border and background color so we know the adView has been added
+    self.adView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.adView.layer.borderWidth = 3;
+    self.adView.layer.backgroundColor = [UIColor redColor].CGColor;
+    
+    [self.view addSubview:self.adView];
+    [self.adView stopAutomaticallyRefreshingContents];              // Ensure MoPub banner refresh is disabled. Consult your account manager if you have any questions.
+    self.adView.delegate = self;
+    
+    [self submitMRECKWBid];                                       // Unlike the non keyword approach, we don't use banner bid objects. You'll have to submit a new bid each time.
+    
+}
+
 
 
 #pragma mark - <MPAdViewDelegate - for Banners!>
@@ -112,7 +144,8 @@ Boolean bannerKWLoaded = false;
     bannerKWLoaded = true;
     
     // On a successful load, call submitBidForAdType for the next refresh
-    [self submitBannerKWBid];
+    // [self submitBannerKWBid];
+    [self submitMRECKWBid];
 
     // Indicate to our controller that we'd like to refresh the ad view
     [self startBannerRefreshTimer];
@@ -126,7 +159,8 @@ Boolean bannerKWLoaded = false;
     bannerKWLoaded = true;
     
     // On a successful load, call submitBidForAdType for the next refresh
-    [self submitBannerKWBid];
+    // [self submitBannerKWBid];
+    [self submitMRECKWBid];
     
     // Indicate to our controller that we'd like to refresh the ad view
     [self startBannerRefreshTimer];

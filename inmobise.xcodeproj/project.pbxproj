@@ -32,6 +32,7 @@
 		924D4B3A20DC557B003EE824 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D4B3920DC557B003EE824 /* UIKit.framework */; };
 		924D4B3C20DC5580003EE824 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D4B3B20DC5580003EE824 /* WebKit.framework */; };
 		924D54C720DC5B55003EE824 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 924D54C620DC5B55003EE824 /* libxml2.2.tbd */; };
+		926E6B8D22E682B4006AF38F /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926E6B8C22E682B4006AF38F /* GoogleMobileAds.framework */; };
 		92BDAD5122A099F10068F713 /* BannerKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BDAD5022A099F10068F713 /* BannerKWViewController.m */; };
 		92BDAD5422A1AF500068F713 /* InterstitialKWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BDAD5322A1AF500068F713 /* InterstitialKWViewController.m */; };
 		92C9E51122A72B8D00BC604F /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C9E50F22A72B8D00BC604F /* InMobiSDK.framework */; };
@@ -77,6 +78,7 @@
 		924D4B3920DC557B003EE824 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		924D4B3B20DC5580003EE824 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		924D54C620DC5B55003EE824 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		926E6B8C22E682B4006AF38F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		92BDAD4F22A099F10068F713 /* BannerKWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerKWViewController.h; sourceTree = "<group>"; };
 		92BDAD5022A099F10068F713 /* BannerKWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerKWViewController.m; sourceTree = "<group>"; };
 		92BDAD5222A1AF500068F713 /* InterstitialKWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialKWViewController.h; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 				924D4B3020DC5560003EE824 /* MessageUI.framework in Frameworks */,
 				924D4B2E20DC555A003EE824 /* MediaPlayer.framework in Frameworks */,
 				924D4B2C20DC5554003EE824 /* Foundation.framework in Frameworks */,
+				926E6B8D22E682B4006AF38F /* GoogleMobileAds.framework in Frameworks */,
 				924D4B2A20DC554D003EE824 /* CoreTelephony.framework in Frameworks */,
 				924D4B2820DC54F3003EE824 /* CoreMedia.framework in Frameworks */,
 				924D4B2620DC54ED003EE824 /* CoreLocation.framework in Frameworks */,
@@ -627,6 +630,7 @@
 		924D4B1E20DC54DA003EE824 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				926E6B8C22E682B4006AF38F /* GoogleMobileAds.framework */,
 				92CE19FB22A86CA90094A9F7 /* DTBiOSSDK.framework */,
 				92CE19F922A86C650094A9F7 /* MoPub.framework */,
 				92C9E51022A72B8D00BC604F /* InMobiABMoPubPlugin.framework */,
